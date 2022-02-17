@@ -71,48 +71,48 @@ Wiegand, T., & A Moloney, K. (2004). Rings, circles, and null‐models for point
 
 ####creating a perfect uniform distribution####
 
-x<- rep(1:10, each=10) 
-y<- rep(1:10, times=10)
-sp<-'a'
-plot(x~y)  
+     x<- rep(1:10, each=10) 
+     y<- rep(1:10, times=10)
+     sp<-'a'
+     plot(x~y)  
 
 ####visualizing the distributions#######
 
-data=data.frame(x,y,sp)
+     data=data.frame(x,y,sp)
 
-BesL(data, 'a', 100, 1, 1000, 'intra', ylim=10.1, xlim=10.1)
+     BesL(data, 'a', 100, 1, 1000, 'intra', ylim=10.1, xlim=10.1)
 
 ####creating a perfect uniform distribution with NAs####
 
-x1<- c(rep(1:10, each=10),NA,NA)
-y1<- c(rep(1:10, times=10),NA,NA)
-sp<-'a'
-plot(x1~y1)
-data1=data.frame(x1,y1,sp)
-BesL(data1, 'a', 100, 1, 1000, 'intra', ylim=10.1, xlim=10.1) ####notice that the L.values are the same of data and data1
+     x1<- c(rep(1:10, each=10),NA,NA)
+     y1<- c(rep(1:10, times=10),NA,NA)
+     sp<-'a'
+     plot(x1~y1)
+     data1=data.frame(x1,y1,sp)
+     BesL(data1, 'a', 100, 1, 1000, 'intra', ylim=10.1, xlim=10.1) ####notice that the L.values are the same of data and data1
 
 ########################################
 
-x<- c(runif(10, 1,4),runif(10, 6,9))
-y<- c(runif(10,1,4), runif(10, 6,9))
-sp<-rep(c('a','b'),each=10)
+     x<- c(runif(10, 1,4),runif(10, 6,9))
+     y<- c(runif(10,1,4), runif(10, 6,9))
+     sp<-rep(c('a','b'),each=10)
 
-data= data.frame(x,y,sp)
+     data= data.frame(x,y,sp)
 
-plot(data[data$sp=='a',]$y~data[data$sp=='a',]$x, xlim=c(0,10.1), ylim=c(0,10.1))
-par(new=T)
-plot(data[data$sp=='b',]$y~data[data$sp=='b',]$x, col='red',xlim=c(0,10.1), ylim=c(0,10.1) )
+     plot(data[data$sp=='a',]$y~data[data$sp=='a',]$x, xlim=c(0,10.1), ylim=c(0,10.1))
+     par(new=T)
+     plot(data[data$sp=='b',]$y~data[data$sp=='b',]$x, col='red',xlim=c(0,10.1), ylim=c(0,10.1) )
 
-BesL(data, 'a', 100, 1, 1000, 'intra', ylim=10, xlim=10) ####notice that the specie 'a' is clumped
-BesL(data, 'a', 100, 1, 1000, 'inter', ylim=10, xlim=10) ####notice that the specie 'a' is dispersed in relation to the specie 'b'
+     BesL(data, 'a', 100, 1, 1000, 'intra', ylim=10, xlim=10) ####notice that the specie 'a' is clumped
+     BesL(data, 'a', 100, 1, 1000, 'inter', ylim=10, xlim=10) ####notice that the specie 'a' is dispersed in relation to the specie 'b'
 
 ######################################
 #####Random Distribution##############
 
-x<- runif(50,1,10)
-y<- runif(50,1,10)
-sp<- rep(c('a','b','c','d','e'), each=10)
-distribution<-data.frame(x,y,sp)
+     x<- runif(50,1,10)
+     y<- runif(50,1,10)
+     sp<- rep(c('a','b','c','d','e'), each=10)
+     distribution<-data.frame(x,y,sp)
 
-BesL(distribution, 'a', 100, 1, 100, 'intra', ylim=10.1, xlim=10.1)
-BesL(distribution, 'a', 100, 1, 100, 'inter', ylim=10.1, xlim=10.1)
+     BesL(distribution, 'a', 100, 1, 100, 'intra', ylim=10.1, xlim=10.1)
+     BesL(distribution, 'a', 100, 1, 100, 'inter', ylim=10.1, xlim=10.1)
