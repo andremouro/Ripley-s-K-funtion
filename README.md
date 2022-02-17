@@ -45,16 +45,16 @@ To determine the L-value, the formula that will be used is and adaptation of the
 If L-value is positive, and above the upper limit of the confidence envelope, the clumped ditribution can be assumed, if L-value is negative the patter can be discribed as dispersed or regular. Else the distribution is alleatory.
 For the determination of the confidence levels, it will be realized Monte Carlo simulations, sampling de x and y values, for the creation of alleatory distributions, and comparing the L-values with the L-values simulated, extracting a p-value. If p-value is higher than 0.97 the distribution of the points can be considered aggregated, if p-value is lower than 0.03 the distribution of the points can be considered dispersed or regular.
 
-#Value:
+# Value:
 A data.frame is returned, with a column 'Focal' with the name of the focal specie chosed by the user; a column 'Specie'  with the name of the specie compared with the focal; a column 'L-value' with the L-value of the observed pattern and a column 'P-value' with the value of p obtained with the comparison with the L-value of the Monte Carlo simulations.
 
-#Warning:
+# Warning:
 For the correct estimation, none x and y value must fall up the xlim or the ylim. Also, two individuals must not fall on the same point (same x and y values). Also, t must obey the following condition: t < (area/2)1/2 (Dixon, 2006).
    
-Author(s):
+# Author(s):
 André Mouro D'Angioli, e-mail andremourodangioli@gmail.com.
 
-References:
+# References:
 Besag, J. (1977). Contribution to the discussion of Dr. Ripley’s paper. Journal of the Royal Statistical Society, Series B 39: 193-195.
 
 Dixon, P. M. (2006). Ripley's K function. Encyclopedia of environmetrics.
@@ -67,7 +67,8 @@ Ripley, B. D. (1977). Modelling spatial patterns. Journal of the Royal Statistic
 
 Wiegand, T., & A Moloney, K. (2004). Rings, circles, and null‐models for point pattern analysis in ecology. Oikos, 104(2), 209-229.
 
-Examples:
+# Examples:
+
 ####creating a perfect uniform distribution####
 
 x<- rep(1:10, each=10) 
@@ -75,7 +76,7 @@ y<- rep(1:10, times=10)
 sp<-'a'
 plot(x~y)  
 
-####visualizing the distributions
+####visualizing the distributions#######
 
 data=data.frame(x,y,sp)
 
